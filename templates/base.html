@@ -1,0 +1,95 @@
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  body {
+    -webkit-font-smoothing: antialiased;
+    background: white;
+    font-family: Times New Roman;
+  }
+
+  .text-label {
+    font-family: "Bungee", sans-serif;
+  }
+
+  .text-label2 {
+    font-family: "Lusitana", sans-serif;
+  }
+
+  .table {
+
+    border: 1px solid black;
+    margin: 10px;
+  }
+
+  .table th,
+  .table td {
+    border: 1px solid black;
+    padding: 10px 20px 10px 20px;
+  }
+
+  .table.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 10px 20px 10px 20px;
+  }
+</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.0.3/tailwind.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+
+<h1 class="text-xl md:text-xl font-bold mb-2 mt-2 text-center text-label">{{businessName}} Review Summary</h1>
+<div class="text-center m-5 text-lg text-label2">
+</div>
+<div class="section">
+  <h1 class="text-2xl md:text-1xl font-medium mb-2 mt-2 text-label">Introduction</h1>
+
+  {% raw %}
+  A template is a text document that contains dynamic data replaced by the values passed in as JSON when the template is
+  rendered.
+  <br><br>
+  Template variables are enclosed in <b>{{ ... }}</b>
+  {% endraw %}
+  <br><br>
+  <b>Website:</b> {{website}}
+</div>
+
+
+
+<div class="section full-width">
+  <h1 class="text-xl md:text-xl font-medium mb-2 mt-2 text-label">Reviews by source</h1>
+  <table class="table md:text-sm table-padding" style="width:100%">
+    <thead>
+      <tr>
+        <th>Source</th>
+        <th>Count</th>
+        <th>Rating</th>
+        <th>Change</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in items%}
+      <tr>
+        <td>{{item.source}}</td>
+        <td>{{item.count}}</td>
+        <td>{{item.previousRating}}</td>
+        <td>{{item.rating}}</td>
+        <td>
+          {{item.change}}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+
+</div>
+
+
+<p style="page-break-after: always;">&nbsp;</p>
+<div class="section">
+  <h1 class="text-3xl md:text-2xl font-medium mb-2 mt-2 text-label">Page break</h1>
+  <span>This is another page</span>
+</div>
