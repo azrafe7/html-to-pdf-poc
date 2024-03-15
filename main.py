@@ -8,7 +8,7 @@ def render_template():
         autoescape=select_autoescape()
     )
 
-    template = env.get_template("base.html")
+    template = env.get_template("base2.html")
 
     genString = template.render(
         businessName="Mr Wong",
