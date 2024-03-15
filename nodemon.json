@@ -1,4 +1,5 @@
 {
-  "verbose": true,
-  "watch": ["templates/*", "main.py"]
+  "watch": ["templates/base2.html", "main.py"],
+  "ignore": ["out/**/*"],
+  "verbose": true
 }

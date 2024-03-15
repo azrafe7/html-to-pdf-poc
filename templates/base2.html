@@ -4,32 +4,41 @@
     body {
       -webkit-font-smoothing: antialiased;
       background: white;
-      font-family: Times New Roman;
+      font-family: "Poppins", sans-serif;
     }
 
-    .text-label {
-      font-family: "Bungee", sans-serif;
+    th,
+    td {
+      border-style: none solid solid none;
+      padding: 2rem;
     }
 
-    .text-label2 {
-      font-family: "Lusitana", sans-serif;
+    tr:first-child th:first-child {
+      border-top-left-radius: 1rem;
     }
 
-    .table {
-
-      border: 1px solid black;
-      margin: 10px;
+    tr:first-child th:last-child {
+      border-top-right-radius: 1rem;
     }
 
-    .table th,
-    .table td {
-      border: 1px solid black;
-      padding: 10px 20px 10px 20px;
+    tr:last-child th:first-child {
+      border-bottom-left-radius: 1rem;
     }
 
-    .table.center {
-      margin-left: auto;
-      margin-right: auto;
+    tr:last-child th:last-child {
+      border-bottom-right-radius: 1rem;
+    }
+
+    tr:first-child th {
+      border-top-style: solid;
+    }
+
+    tr th:first-child {
+      border-left-style: solid;
+    }
+
+    td {
+      text-align: center;
     }
 
     .section {
@@ -109,60 +118,61 @@
           <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
             <div class="flex flex-col grow max-md:mt-10">
               <div
-                class="z-10 justify-center px-11 py-5 text-4xl font-semibold bg-gray-100 rounded-2xl text-zinc-800 max-md:px-5">
-                Response Time
+                class="z-10 justify-center px-10 py-5 text-4xl font-semibold bg-gray-100 rounded-2xl text-zinc-800 max-md:px-5">
+                Response time
               </div>
               <div
-                class="flex flex-col items-center px-11 py-14 text-center bg-white rounded-none shadow-lg max-md:px-5 h-80">
-                <div class="self-stretch text-6xl font-semibold leading-[80.64px] text-zinc-800 max-md:text-4xl">
-                  2 days
+                class="flex justify-center items-center px-16 py-14 text-center bg-white rounded-none shadow-lg max-md:px-5 h-80">
+                <div class="flex flex-col max-w-full w-[174px] min-h-[310px]">
+                  <div class="text-6xl font-semibold leading-[99.96px] text-zinc-800 max-md:text-4xl">
+                    2 days
+                  </div>
+                  <div class="mt-10 text-2xl leading-7 text-zinc-600 max-md:mt-10">
+                    Last Period: 4 days
+                  </div>
+                  <img loading="lazy"
+                    src="https://cdn.builder.io/api/v1/image/assets/TEMP/685903c35d20c93fc81581691af7cef6e947842cce27cec2c4ccc7b4e33d7868?"
+                    class="self-center mt-9 max-w-full aspect-[4.35] w-[125px]" />
                 </div>
-                <div class="mt-7 text-2xl leading-7 text-zinc-600">
-                  Last Period: 4 days
-                </div>
-                <img loading="lazy"
-                  src="https://cdn.builder.io/api/v1/image/assets/TEMP/166b5851cee65c0aa7cfa3b6360262f2e47221b38c3d06eb259f82db383909ed?"
-                  class="mt-8 max-w-full aspect-[4.35] w-[125px]" />
               </div>
             </div>
           </div>
           <div class="flex flex-col ml-5 w-3/12 max-md:ml-0 max-md:w-full">
-            <div class="flex flex-col grow text-4xl font-semibold whitespace-nowrap text-zinc-800 max-md:mt-10">
-              <div class="z-10 justify-center items-center px-16 py-5 bg-gray-100 rounded-2xl max-md:px-5">
+            <div class="flex flex-col grow max-md:mt-10">
+              <div
+                class="z-10 justify-center px-10 py-5 text-4xl font-semibold bg-gray-100 rounded-2xl text-zinc-800 max-md:px-5">
                 Sentiment
               </div>
               <div
-                class="flex flex-col items-center px-11 py-14 text-center bg-white rounded-none shadow-lg max-md:px-5 h-80">
+                class="flex justify-center items-center px-16 py-14 text-center bg-white rounded-none shadow-lg max-md:px-5 h-80">
                 <img loading="lazy"
                   src="https://cdn.builder.io/api/v1/image/assets/TEMP/a37f453dbee1d7cce100464394dd2e9f8c30dfbdb68017bcb82270b299f9d471?"
                   class="w-full shadow-lg aspect-[1.23]" />
               </div>
-
             </div>
           </div>
         </div>
       </div>
-      <table
-        class="flex flex-col pb-20 mt-36 text-4xl text-black bg-white border-black border-solid border-[3px] leading-[52px] max-md:mt-10 max-md:max-w-full">
+      <table class="table border-nonepb-20 mt-36 text-4xl text-black leading-[52px] max-md:mt-10 max-md:max-w-full">
         <thead
-          class="flex z-10 flex-col px-16 pt-7 pb-5 -mt-1 font-bold bg-gray-100 border-black border-solid border-[3px] max-md:px-5 max-md:max-w-full rounded-xl">
-          <tr class="flex gap-5 justify-center px-10 py-2.5 max-md:flex-wrap max-md:px-5 max-md:mr-2 max-md:max-w-full">
-            <th class="flex-auto">Source</th>
-            <th class="flex-auto">Reviews</th>
-            <th class="flex-auto">Previous Rating</th>
-            <th class="flex-auto">Current Rating</th>
-            <th class="flex-auto">Change</th>
+          class="p-10 z-10 pt-7 pb-5 -mt-1 font-bold bg-gray-100 border-solid border-[3px] max-md:px-5 max-md:max-w-full rounded-xl">
+          <tr class="">
+            <!-- class="flex gap-5 justify-center px-[10px] py-2.5 max-md:flex-wrap max-md:px-5 max-md:mr-2 max-md:max-w-full" -->
+            <th class="align-center">Source</th>
+            <th class="">Reviews</th>
+            <th class="">Previous Rating</th>
+            <th class="">Current Rating</th>
+            <th class="">Change</th>
           </tr>
         </thead>
 
-        <tbody
-          class="flex gap-5 self-center mt-14 w-full text-center whitespace-nowrap max-w-[1822px] mb-[466px] max-md:flex-wrap max-md:my-10 max-md:max-w-full bg-white rounded-none shadow-lg">
-          <tr>
-            <td class="flex-auto">Google</td>
-            <td class="flex-auto">85</td>
-            <td class="flex-auto">4.7</td>
-            <td class="flex-auto">4.8</td>
-            <td class="flex-auto">10%</td>
+        <tbody>
+          <tr class="">
+            <td class="">Google</td>
+            <td class="">85</td>
+            <td class="">4.7</td>
+            <td class="">4.8</td>
+            <td class="">10%</td>
           </tr>
         </tbody>
       </table>

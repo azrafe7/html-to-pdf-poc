@@ -16,13 +16,13 @@ def render_template():
     )
 
     # Open a file in write mode (w)
-    with open("gen.html", "w") as file:
+    with open("out/gen.html", "w") as file:
         # Write the string to the file
         file.write(genString)
         print("rendered")
 
-        with open('gen.html') as f:
-            pdfkit.from_string(genString, 'gen.pdf')
+        with open('out/gen.html') as f:
+            pdfkit.from_string(genString, 'out/gen.pdf')
             print("pdf generated")
 
 
